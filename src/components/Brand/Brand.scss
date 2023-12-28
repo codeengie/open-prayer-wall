@@ -1,0 +1,9 @@
+.brand {
+	display: flex;
+	min-width: 110px;
+
+	&__logo {
+		height: auto;
+		width: 148px;
+	}
+}

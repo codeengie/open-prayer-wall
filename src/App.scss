@@ -1,0 +1,24 @@
+html,
+body {
+	height: 100%;
+}
+
+main {
+	flex-grow: 1;
+
+	@media (width >= 1200px) {
+		margin: 0 auto;
+		width: 1200px;
+	}
+}
+
+#root {
+	display: flex;
+	flex-flow: column;
+	min-height: 100%;
+}
+
+.header,
+.hero {
+	flex-grow: 0;
+}

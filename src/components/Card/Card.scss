@@ -1,0 +1,41 @@
+.card {
+	align-items: center;
+	background-color: var(--snuff);
+	display: flex;
+	flex-flow: column;
+	padding: 30px 16px 26px;
+
+	&__button {
+		margin-top: 16px;
+	}
+
+	&__counter {
+		margin-top: 14px;
+	}
+
+	&__name {
+		font-size: 1.2rem;
+	}
+
+	&__message {
+		font-size: 1.4rem;
+		margin-top: 20px;
+	}
+
+	&__title {
+		align-items: center;
+		display: flex;
+		flex-flow: column;
+		font-size: 1.6rem;
+		margin-top: 4px;
+		text-align: center;
+
+		&::after {
+			background-color: var(--dove-gray);
+			content: '';
+			height: 2px;
+			margin-top: 10px;
+			width: 70px;
+		}
+	}
+}

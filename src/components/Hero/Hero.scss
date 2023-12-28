@@ -1,0 +1,112 @@
+.hero {
+	align-items: center;
+	background-color: var(--mobster);
+	display: flex;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+
+	@media (width >= 1200px) {
+		margin: 0 auto;
+		width: 1200px;
+	}
+
+	&__bg {
+		position: absolute;
+		height: 200px;
+		width: 100%;
+	}
+
+	&__book,
+	&__text {
+		text-shadow: 1px 1px 2px var(--black);
+	}
+
+	&__book {
+		align-self: end;
+		font-size: 1.2rem;
+	}
+
+	&__verse {
+		color: var(--white);
+		display: flex;
+		flex-flow: column;
+		font-weight: var(--weight-semibold);
+		position: relative;
+		z-index: 6;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+	}
+
+	@media (width <= 575px) {
+		justify-content: center;
+
+		&__verse {
+			width: 286px;
+		}
+	}
+
+	@media (width >= 576px) {
+		height: 280px;
+
+		&__bg {
+			height: 280px;
+		}
+
+		&__book {
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+
+		&__verse {
+			position: absolute;
+			right: 20px;
+			width: 342px;
+		}
+	}
+
+	@media (width >= 768px) {
+		height: 298px;
+
+		&__bg {
+			height: 298px;
+		}
+
+		&__book {
+			font-size: 1.6rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+
+		&__verse {
+			width: 380px;
+		}
+	}
+
+	@media (width >= 1200px) {
+		height: 354px;
+
+		&__bg {
+			height: 354px;
+		}
+
+		&__book {
+			font-size: 1.8rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__verse {
+			width: 418px;
+		}
+	}
+}

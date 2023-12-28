@@ -1,0 +1,30 @@
+.counter {
+	$self: &;
+
+	display: flex;
+
+	&__count {
+		font: {
+			size: 1.2rem;
+			weight: var(--weight-semibold);
+		}
+		padding: 0 4px;
+	}
+
+	&__icon {
+		background: transparent url(../../assets/images/praying_hands.svg) no-repeat 0 0 / cover;
+		display: block;
+		height: 16.8px;
+		width: 8px;
+
+		&--flip {
+			background-position-x: -8px;
+		}
+	}
+
+	&--no-count {
+		#{$self}__icon {
+			margin-right: 2px;
+		}
+	}
+}

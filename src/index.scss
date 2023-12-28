@@ -1,0 +1,94 @@
+@import './styles/fonts';
+
+$font-family: 'Montserrat', Arial, sans-serif;
+
+:root {
+	// Color scheme
+	--affair: #6c478c;
+	--alto: #d9d9d9;
+	--amethyst: #a16ad1;
+	--black: #000000;
+	--dove-gray: #707070;
+	--gallery: #ececec;
+	--gray: #808080;
+	--mobster: #7e7684;
+	--mandys-pink: #f7c3c1;
+	--monza: #de120a;
+	--purple-heart: #9c29b2;
+	--silver: #cccccc;
+	--white: #ffffff;
+	--snuff: #e7e7f4;
+
+	// Typeface weights
+	--weight-regular: 400;
+	--weight-semibold: 600;
+
+	background-color: var(--white);
+	color: var(--black);
+	font: {
+		family: $font-family;
+		size: 62.5%;
+		weight: var(--weight-regular);
+	}
+	line-height: 1.4;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+blockquote,
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+ol,
+ul,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1.4rem;
+}
+
+button {
+	background-color: transparent;
+	font-family: $font-family; // Like inputs and text this must be specified
+	border-style: none;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	border: 0;
+	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::placeholder {
+		opacity: 1;
+	}
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+textarea {
+	margin: 0;
+	resize: none;
+	white-space: revert;
+}
+
+.noscroll {
+	overflow: hidden;
+}

@@ -1,0 +1,19 @@
+.button {
+	background-color: var(--amethyst);
+	border-radius: 4px;
+	color: var(--white);
+	font-weight: var(--weight-semibold);
+	height: 28px;
+	transition: all .2s ease-in;
+	width: 100px;
+
+	&:disabled {
+		background-color: var(--mobster);
+		cursor: not-allowed;
+	}
+
+	&:not([disabled]):hover {
+		background-color: var(--affair);
+		transition: all .5s ease-out;
+	}
+}

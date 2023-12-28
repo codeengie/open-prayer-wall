@@ -1,0 +1,42 @@
+.prayer-wall {
+	padding: 24px 20px 0;
+
+	@media (width >= 1200px) {
+		padding: {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__brick {
+		box-shadow: 3px 3px 4px var(--silver);
+	}
+
+	&__masonry {
+		@media (width >= 992px) {
+			gap: 16px !important;
+
+			> div {
+				gap: 16px !important;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		margin-bottom: 30px;
+		text-align: center;
+
+		@media (width >= 768px) {
+			font-size: 2.2rem;
+		}
+
+		@media (width >= 992px) {
+			font-size: 2.4rem;
+		}
+
+		@media (width >= 1200px) {
+			font-size: 2.6rem;
+		}
+	}
+}

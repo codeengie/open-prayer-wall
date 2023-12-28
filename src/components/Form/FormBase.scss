@@ -1,0 +1,82 @@
+.form {
+	$self: &;
+
+	&__field {
+		&:first-of-type {
+			margin-top: 24px;
+		}
+
+		&:not(:first-of-type) {
+			margin-top: 8px;
+		}
+
+		// Set the height of all inputs except textarea
+		&:not(:nth-of-type(3)) {
+			#{$self}__wrap {
+				height: 42px;
+			}
+		}
+
+		&--error {
+			#{$self} {
+				&__message {
+					min-height: 18px;
+					padding: 4px 2px 6px;
+					opacity: 1;
+					transition: opacity .3s ease, min-height .2s ease;
+				}
+
+				&__wrap {
+					background-color: var(--mandys-pink);
+					outline: 1px solid var(--monza);
+				}
+			}
+		}
+	}
+
+	&__input,
+	&__textarea {
+		background-color: transparent;
+		font: {
+			family: 'Montserrat', sans-serif;
+			size: 1.4rem;
+			weight: var(--weight-regular);
+		}
+		margin-top: 2px;
+		min-width: 200px;
+	}
+
+	&__label,
+	&__message {
+		font: {
+			size: 1.2rem;
+			weight: var(--weight-semibold);
+		}
+	}
+
+	&__label {
+		color: var(--dove-gray);
+		margin-top: 4px;
+	}
+
+	&__message {
+		color: var(--monza);
+		height: 0;
+		line-height: 1.1;
+		min-height: 0;
+		opacity: 0;
+		transition: all .2s ease;
+	}
+
+	&__wrap {
+		background-color: var(--gallery);
+		display: flex;
+		flex-flow: column;
+		padding: 2px 11px 6px;
+
+		&:focus-within {
+			background-color: var(--alto);
+			outline: 1px solid var(--gray);
+		}
+	}
+}

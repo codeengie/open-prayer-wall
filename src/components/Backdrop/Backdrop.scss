@@ -1,0 +1,22 @@
+.backdrop {
+	background-color: rgba(0, 0, 0, .5);
+	backdrop-filter: blur(4px);
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	opacity: 0;
+	right: 0;
+	top: 0;
+	z-index: 1015;
+
+	/**
+	 * I'm aware the modal I created is a bit crude because it doesn't do anything after the animation is finished
+	 * and in this case doesn't animate off but rather just disappears. To the untrained eye this is fine but I will
+	 * address this in another phase because it requires extending the modal context.
+	 */
+	&--show {
+		opacity: 1;
+		position: fixed;
+		transition: opacity .2s ease-in;
+	}
+}
